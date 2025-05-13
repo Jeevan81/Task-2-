@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dynamic Data Table</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="fancy-heading">Dynamic Data Table</h1>
+
+    <input type="text" id="searchInput" placeholder="Search..." />
+
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">ID</th>
+          <th onclick="sortTable(1)">Name</th>
+          <th onclick="sortTable(2)">Age</th>
+          <th onclick="sortTable(3)">Email</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+
+    <div class="pagination">
+      <button onclick="prevPage()">Previous</button>
+      <span id="pageInfo"></span>
+      <button onclick="nextPage()">Next</button>
+    </div>
+
+    <button onclick="exportCSV()">Export CSV</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

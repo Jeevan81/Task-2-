@@ -1,0 +1,142 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* black-blue gradient */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  margin-top: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00ffe1;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+#searchInput::placeholder {
+  color: #ccc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: transparent;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background-color: #00bcd4;
+  color: white;
+  padding: 14px;
+  text-align: left;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #444;
+  color: #eee;
+}
+
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+button {
+  padding: 10px 20px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 15px rgba(0, 114, 255, 0.6);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(0, 114, 255, 0.9);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+#pageInfo {
+  font-weight: bold;
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  th, td {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  #searchInput {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+  @keyframes pulseGlow {
+  0%, 100% {
+    text-shadow:
+      0 0 5px #00ffe1,
+      0 0 10px #00ffe1,
+      0 0 15px #00ffe1,
+      0 0 20px #00ffe1;
+  }
+  50% {
+    text-shadow:
+      0 0 10px #00ffe1,
+      0 0 20px #00ffe1,
+      0 0 30px #00ffe1,
+      0 0 40px #00ffe1;
+  }
+}
+}
